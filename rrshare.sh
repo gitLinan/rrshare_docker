@@ -46,7 +46,7 @@ echo "恭喜，您已完成基础环境安装，可执行安装程序。"
 
 # 开始安装人人影视客户端
 install_rrshare(){
-    docker run -d -p 3001:3001 -v /opt/rrdata:/opt/work/store --name rrys baiyuetribe/rrshare   
+    docker run -d -p 3001:3001 -v /opt/download:/opt/work/store --name rrys baiyuetribe/rrshare   
 }
 stop_rrshare(){
     docker stop rrys
@@ -57,7 +57,7 @@ start_rrshare(){
 
 # 安装h5ai在线播放器
 install_h5ai(){
-    docker run -d -p 10010:80 -v /opt/rrdata:/h5ai --name h5ai ilemonrain/h5ai:full    
+    docker run -d -p 10010:80 -v /opt/download:/h5ai --name h5ai ilemonrain/h5ai:full    
 }
 stop_h5ai(){
     docker stop h5ai
